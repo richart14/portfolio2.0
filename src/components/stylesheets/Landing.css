@@ -1,0 +1,81 @@
+.landing span {
+  cursor: default;
+  opacity: 1; /* starts at 0 and translates to 1*/
+  transition: opacity 8s;
+  -webkit-transition: opacity 8s;
+}
+
+.landing .title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  top: 30%;
+  text-transform: uppercase;
+  font-size: 30pt;
+  letter-spacing: .5em;
+  color: #51b6e5;
+  font-weight: 300;
+  padding-left: 53px;
+  z-index: 5;
+}
+
+.landing .title .highlight {
+  color: #0e76bc;
+  font-weight: 700;
+}
+
+.landing .tag-box {
+  position: absolute;
+  bottom: 30%;
+  z-index: 99;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: .3em;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 14pt;
+  font-weight: 300;
+}
+
+.landing .tag-box .center {
+  margin: 0 70px;
+}
+
+.landing.shutter {
+  display: none;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 64.063em) {
+  .landing .tag-box span {
+    font-size: 10pt;
+  }
+  .landing .tag-box .center {
+    margin: 0 30px;
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  .landing .title {
+    font-size: 20pt;
+    padding-left: 10px;
+  }
+
+  .landing .tag-box {
+    margin-bottom: -40px;
+  }
+
+  .landing .tag-box .center {
+    margin: 30px 0 0 0;
+  }
+
+  .landing .tag-box span {
+    font-size: 10pt;
+    display: block;
+    margin-top: 30px;
+  }
+}
