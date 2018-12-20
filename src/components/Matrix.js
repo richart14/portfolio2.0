@@ -1,14 +1,14 @@
-import React, { Component } from 'react'
-import './stylesheets/Matrix.css'
+import React from 'react';
+import Code from './matrixcomponent/Code';
+import './stylesheets/Matrix.css';
+import _ from 'lodash';
 
-export class Matrix extends Component {
-  render() {
-    return (
-      <div>
-        
-      </div>
-    )
-  }
-}
+const CODE_LINES_COUNT = 100;
+
+const Matrix = () => (
+  <div className="matrix">
+    {_.times(CODE_LINES_COUNT).map((_,i) => <Code key={i} />)}
+  </div>
+);
 
 export default Matrix

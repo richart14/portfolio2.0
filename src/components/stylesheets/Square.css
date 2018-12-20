@@ -1,0 +1,100 @@
+.square {
+  text-align: center;
+  color: black;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto auto;
+  height: 16%;
+  width: 16%;
+}
+
+.square .logo {
+  cursor: pointer;
+  height: 8vw;
+  max-height: 110px;
+  min-height: 81px;
+  min-width: 81px;
+  position: absolute;
+  top: -2px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto auto;
+  z-index: 99;
+  transition: filter .4 linear;
+  -webkit-transition: -webkit-filter .4s linear;
+}
+
+.square .logo:hover {
+  -webkit-filter: saturate(200%);
+  filter: saturate(200%);
+}
+
+.square .logo.shake {
+  animation: shake 8s infinite;
+  -webkit-animation: shake 8s infinite;
+}
+
+
+@media only screen and (max-width: 50em) {
+  .square .logo {
+    min-height: 41px;
+    min-width: 41px;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(2px, 1px); }
+  95% {
+    transform: translate(2px, 1px) rotate(0deg); }
+  95.5% {
+    transform: translate(-1px, -2px) rotate(-1deg); }
+  96% {
+    transform: translate(-3px, 0px) rotate(1deg); }
+  96.5% {
+    transform: translate(0px, 2px) rotate(0deg); }
+  97% {
+    transform: translate(1px, -1px) rotate(1deg); }
+  97.5% {
+    transform: translate(-1px, 2px) rotate(-1deg); }
+  98% {
+    transform: translate(-3px, 1px) rotate(0deg); }
+  98.5% {
+    transform: translate(2px, 1px) rotate(-1deg); }
+  99% {
+    transform: translate(-1px, -1px) rotate(1deg); }
+  99.5% {
+    transform: translate(2px, 2px) rotate(0deg); }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg); } 
+}
+
+@-webkit-keyframes shake {
+  95% {
+    -webkit-transform: translate(2px, 1px) rotate(0deg); }
+  95.5% {
+    -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+  96% {
+    -webkit-transform: translate(-3px, 0px) rotate(1deg); }
+  96.5% {
+    -webkit-transform: translate(0px, 2px) rotate(0deg); }
+  97% {
+    -webkit-transform: translate(1px, -1px) rotate(1deg); }
+  97.5% {
+    -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+  98% {
+    -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+  98.5% {
+    -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+  99% {
+    -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+  99.5% {
+    -webkit-transform: translate(2px, 2px) rotate(0deg); }
+  100% {
+    -webkit-transform: translate(1px, -2px) rotate(-1deg); } 
+}
