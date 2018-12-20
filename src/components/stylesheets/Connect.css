@@ -1,0 +1,74 @@
+
+section.connect .icon-box {
+  text-align: center;
+  z-index: 14;
+  position: absolute;
+  width: 100%;
+  bottom: 23%;
+  left: 0; 
+}
+
+section.connect .icon-box .icon {
+  box-shadow: 0 0 0 3px white;
+  overflow: hidden;
+  display: none;
+  -webkit-transition: background 0.3s, color 0.3s, box-shadow 0.3s, -webkit-transform 0.3s;
+  -moz-transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+  cursor: pointer;
+  margin: 0px 5%;
+  width: 70px;
+  height: 70px;
+  position: relative;
+  text-align: center; 
+}
+
+section.connect .icon-box .icon.pop-in {
+  animation: popIn .5s ease; 
+}
+
+section.connect .icon-box .fa {
+  text-align: center;
+  font-size: 27pt;
+  line-height: 50pt;
+  color: #fff; 
+}
+
+section.connect .icon-box .fa.fa-envelope {
+  margin-left: -7px; 
+}
+
+section.connect .icon-box .fa.fa-facebook {
+  margin-left: -5px; 
+}
+
+section.connect .icon-box .icon:hover {
+  background: white;
+  box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.3);
+  -ms-transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9); 
+}
+
+section.connect .icon-box .icon:hover .fa {
+  color: #1B75BB; 
+}
+
+section.connect .icon-box .icon:hover .fa {
+  -webkit-animation: toBottomFromTop 0.3s forwards;
+  -moz-animation: toBottomFromTop 0.3s forwards;
+  animation: toBottomFromTop 0.3s forwards; 
+}
+
+.connect .icon-box {
+  opacity: 0;
+  transition: opacity .3s linear; 
+}
+
+.connect.active .icon-box {
+opacity: 1; 
+}
+
+.connect.active .icon-box .icon {
+  display: inline-block; 
+}

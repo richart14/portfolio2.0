@@ -2,10 +2,12 @@ import React, { Component } from 'react'
 
 export class Stack extends Component {
   render() {
+
     return (
-      <div>
-        
-      </div>
+      <section className="stack">
+        <div className="badges-box">
+        </div>
+      </section>
     )
   }
 }

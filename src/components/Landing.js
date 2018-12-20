@@ -3,14 +3,11 @@ import './stylesheets/Landing.css'
 
 export class Landing extends Component {
   
-  state = {
-    opacity: 0,
-  }
   render() {
     const { shutState } = this.props;
     return (
       <section className={`landing ${ shutState ? 'shutter' : '' }`}>
-        <span className="title">richard<span className="highlight">tom</span></span>
+        <span className="title"><span className="highlight">r</span>ichard<span className="highlight">t</span>om</span>
         <div className="tag-box">
           <span>problem solver</span>
           <span className="center">full-stack developer</span>
