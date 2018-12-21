@@ -1,8 +1,12 @@
 .landing span {
   cursor: default;
+  opacity: 0;
+  transition: opacity 6s;
+  -webkit-transition: opacity 6s; 
+}
+
+.landing span.show {
   opacity: 1;
-  transition: opacity 8s;
-  -webkit-transition: opacity 8s; 
 }
 
 .landing .title {

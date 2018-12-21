@@ -10,8 +10,9 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      mounted: false,
       landing: {
-        shutter: false
+        shutter: false,
       },
       cloud: {
         display: true
@@ -52,6 +53,14 @@ class App extends Component {
         active: false
       },
     }
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        mounted: true,
+      })
+    }, 100);
   }
 
   handleLandingShut(e) {
@@ -323,14 +332,13 @@ class App extends Component {
   }
 
   render() {
-    const { landing, cloud, p1, p2, p3, p4, square, connect, about } = this.state;
+    const { mounted, landing, cloud, p1, p2, p3, p4, square, connect, about } = this.state;
 
     return (
       <div className="App">
         <Clouds inverse={false}/>
         <Clouds inverse={true} display={cloud.display}/>
-        {/* <Matrix /> */}
-        <Landing shutState={landing.shutter}/>
+        <Landing shutState={landing.shutter} mounted={mounted}/>
         <PaneContainer 
           toggleSquare={e => this.toggleSquare(e)} 
           toggleShake={e => this.toggleShake(e)} 

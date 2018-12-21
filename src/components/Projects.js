@@ -3,9 +3,9 @@ import React, { Component } from 'react'
 export class Projects extends Component {
   render() {
     return (
-      <div>
+      <section className="projects">
         
-      </div>
+      </section>
     )
   }
 }
