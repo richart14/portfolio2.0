@@ -5,7 +5,7 @@ export class Links extends Component {
     const { href, icon, blank, index } = this.props;
     return (
       <a href={href} target={ blank ? "_blank" : "" }>
-        <div className="icon" id={`icon-${index}`}>
+        <div className="icon pop-in" id={`icon-${index}`}>
           <i className={icon} />
         </div>
       </a>

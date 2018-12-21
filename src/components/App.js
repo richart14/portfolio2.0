@@ -71,7 +71,7 @@ class App extends Component {
   }
 
   toggleSquare(e) {
-    const { p1, p2, p3, connect, cloud, landing } = this.state;
+    const { p1, p2, p3, connect, cloud, landing, about } = this.state;
     switch(p1.status) {
       case 'shutter': 
       if (p2.status === 'active' || p3.status === 'extend active') {
@@ -96,6 +96,9 @@ class App extends Component {
             id: 4,
             content: 'full stack'
           },
+          about : {
+            active: !about.active
+          }
         });
       } else {
         this.setState({
@@ -320,7 +323,7 @@ class App extends Component {
   }
 
   render() {
-    const { landing, cloud, p1, p2, p3, p4, square, connect } = this.state;
+    const { landing, cloud, p1, p2, p3, p4, square, connect, about } = this.state;
 
     return (
       <div className="App">
@@ -337,7 +340,7 @@ class App extends Component {
           toggleP3={e => this.toggleP3(e)}
           toggleP4={e => this.toggleP4(e)}
         />
-        <Sections connect={connect}/>
+        <Sections connect={connect} about={about}/>
       </div>
     );
   }

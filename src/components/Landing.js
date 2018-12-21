@@ -11,7 +11,7 @@ export class Landing extends Component {
         <div className="tag-box">
           <span>problem solver</span>
           <span className="center">full-stack developer</span>
-          <span>enthusiast</span>
+          <span>traveler</span>
         </div>
       </section>
     )

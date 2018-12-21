@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Links from './Links';
+import resume from './pdf/Richard\'s Tech Resume.pdf'
 import './stylesheets/Connect.css';
 
 export class Connect extends Component {
@@ -16,7 +17,7 @@ export class Connect extends Component {
         name: 'github', href: 'https://github.com/richart14', icon: 'fa fa-github', blank : true
       },
       {
-        name: 'resume', href: 'https://drive.google.com/open?id=1VpRkKjUZejkMaYBta1oJYw1SdvmVa0hT', icon: 'fa fa-file', blank: true
+        name: 'resume', href: `${resume}`, icon: 'fa fa-file', blank: true
       }
     ];
     return (

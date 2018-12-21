@@ -1,0 +1,138 @@
+section.about {
+  width: 42%;
+  height: 100%;
+  left: 3%;
+  position: absolute;
+}
+
+section.about .about-box {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 45%;
+  width: 85%;
+  margin: auto auto;
+  z-index: 12;
+  max-width: 550px;
+  left: 0;
+  right: 0;
+}
+
+section.about .about-box.hide {
+  display: none;
+}
+
+section.about .about-box .profile-pic {
+  height: 45%;
+  margin: 0 auto;
+  border-radius: 100%;
+  left: 0;
+  right: 0;
+  -webkit-animation: bounce .6s ease;
+  animation: bounce .6s ease;
+  /* Fixes to profile pic */
+  position: absolute;
+  height: 202px;
+  top: -75px;
+}
+
+section.about .about-box .header {
+  display: block;
+  text-align: center;
+  font-size: 23pt;
+  color: #49b9c0;
+  /* margin-bottom: 15px; */
+  font-weight: 600; 
+  /* Fixes to profile pic */
+  margin-top: 125px;
+}
+
+section.about .about-box .detail {
+  display: block;
+  font-size: 16pt;
+  color: #555;
+  margin-left: 20px;
+  line-height: 24pt; 
+  font-weight: 300;
+}
+
+@media only screen and (max-width: 80em), screen and (max-height: 55em) {
+  section.about .about-box .detail {
+    font-size: 12pt;
+    line-height: 21pt; 
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  section.about .about-box {
+    width: 95%; 
+  }
+
+  section.about .about-box .header {
+    font-size: 16pt; 
+  }
+
+  section.about .about-box .detail {
+    font-size: 10pt;
+    line-height: 15pt; 
+  }
+}
+
+@media only screen and (max-width: 30em) {
+  section.about .about-box .detail {
+    font-size: 8pt;
+    line-height: 10pt; 
+  }
+}
+
+@keyframes bounce {
+  from, 60%, 75%, 90%, 100% {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); 
+  }
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -3000px, 0); 
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(0, 25px, 0); 
+  }
+  75% {
+    transform: translate3d(0, -10px, 0); 
+  }
+  90% {
+    transform: translate3d(0, 5px, 0); 
+  }
+  100% {
+    transform: none; 
+  } 
+}
+
+@-webkit-keyframes bounce {
+  from, 60%, 75%, 90%, 100% {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); 
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0); 
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0); 
+  }
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0); 
+  }
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+  100% {
+    -webkit-transform: none;
+    transform: none; 
+  } 
+  }

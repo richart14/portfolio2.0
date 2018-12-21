@@ -6,10 +6,10 @@ import Projects from './Projects';
 
 export class Sections extends Component {
   render() {
-    const { connect } = this.props;
+    const { connect, about } = this.props;
     return (
       <div className="sections">
-        <AboutMe />
+        <AboutMe status={ about } />
         <Connect status={ connect }/>
         <Projects />
         <Stack />

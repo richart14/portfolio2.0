@@ -72,3 +72,39 @@ opacity: 1;
 .connect.active .icon-box .icon {
   display: inline-block; 
 }
+
+@media only screen and (max-width: 40em) {
+  section.connect .icon-box .icon {
+    margin: 0 1%; 
+  } 
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0, 0); 
+  }
+  50% {
+    transform: scale(1.2, 1.2); 
+  }
+  70% {
+    transform: scale(0.9, 0.9); 
+  }
+  100% {
+    transform: scale(1, 1);
+  } 
+}
+
+@-webkit-keyframes popIn {
+  0% {
+    -webkit-transform: scale(0, 0); 
+  }
+  50% {
+    -webkit-transform: scale(1.2, 1.2); 
+  }
+  70% {
+    -webkit-transform: scale(0.9, 0.9); 
+  }
+  100% {
+    -webkit-transform: scale(1, 1); 
+  } 
+}
