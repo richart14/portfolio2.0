@@ -1,0 +1,96 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+section.projects {
+  display: none;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 11;
+  height: 58%;
+}
+
+section.projects.show {
+  display: block;
+}
+
+section.projects .fa {
+  position: absolute;
+  color: #10517E;
+  z-index: 11;
+  bottom: 6vh;
+  font-size: 30pt;
+  height: 35px;
+  cursor: pointer;
+}
+
+section.projects .fa.fa-chevron-left {
+  left: 35%;
+  animation: bounceInLeft .5s ease-in;
+}
+
+section.projects .fa.fa-chevron-right {
+  right: 35%;
+  animation: bounceInRight .5s ease-in;
+}
+
+@keyframes bounceInLeft {
+  30% {
+    transform: translateX(-50vw); 
+  }
+  50% {
+    transform: translateX(0); 
+  }
+  75% {
+    transform: translateX(-3vw); 
+  }
+  100% {
+    transform: translateX(0); 
+  } 
+}
+
+@keyframes bounceInRight {
+  30% {
+    transform: translateX(50vw); 
+  }
+  50% {
+    transform: translateX(0); 
+  }
+  75% {
+    transform: translateX(3vw); 
+  }
+  100% {
+    transform: translateX(0); 
+  } 
+}
+
+@-webkit-keyframes bounceInLeft {
+  20% {
+    -webkit-transform: translateX(50vw); 
+  }
+  50% {
+    -webkit-transform: translateX(0); 
+  }
+  75% {
+    -webkit-transform: translateX(3vw); 
+  }
+  100% {
+    -webkit-transform: translateX(0); 
+  } 
+}
+
+@-webkit-keyframes bounceInRight {
+  20% {
+    -webkit-transform: translateX(-50vw); 
+  }
+  50% {
+    -webkit-transform: translateX(0); 
+  }
+  75% {
+    -webkit-transform: translateX(-3vw); 
+  }
+  100% {
+    -webkit-transform: translateX(0); 
+  } 
+}

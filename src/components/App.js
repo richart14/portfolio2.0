@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './stylesheets/App.css';
 import Clouds from './Clouds';
 import Landing from './Landing';
-// import Matrix from './Matrix';
+import Matrix from './Matrix';
 import PaneContainer from './PaneContainer';
 import Sections from './Sections';
 
@@ -80,10 +80,10 @@ class App extends Component {
   }
 
   toggleSquare(e) {
-    const { p1, p2, p3, connect, cloud, landing, about } = this.state;
+    const { p1, p2, p3, connect, cloud, landing, about, projects } = this.state;
     switch(p1.status) {
       case 'shutter': 
-      if (p2.status === 'active' || p3.status === 'extend active') {
+      if (p2.status === 'active') {
         this.setState({
           p1 : {
             status: '',
@@ -109,6 +109,32 @@ class App extends Component {
             active: !about.active
           }
         });
+      } else if ( p3.status === 'extend active' ) {
+        this.setState({
+          p1 : {
+            status: '',
+            id: 1,
+            content: 'connect'
+          },
+          p2 : {
+            status: '',
+            id: 2,
+            content: 'about me'
+          }, 
+          p3 : {
+            status: '',
+            id: 3,
+            content: 'projects'
+          }, 
+          p4: {
+            status: '',
+            id: 4,
+            content: 'full stack'
+          },
+          projects : {
+            active: !projects.active
+          }
+        });;
       } else {
         this.setState({
           p1 : {
@@ -332,12 +358,13 @@ class App extends Component {
   }
 
   render() {
-    const { mounted, landing, cloud, p1, p2, p3, p4, square, connect, about } = this.state;
+    const { mounted, landing, cloud, p1, p2, p3, p4, square, connect, about, projects } = this.state;
 
     return (
       <div className="App">
         <Clouds inverse={false}/>
         <Clouds inverse={true} display={cloud.display}/>
+        {/* <Matrix /> */}
         <Landing shutState={landing.shutter} mounted={mounted}/>
         <PaneContainer 
           toggleSquare={e => this.toggleSquare(e)} 
@@ -348,7 +375,7 @@ class App extends Component {
           toggleP3={e => this.toggleP3(e)}
           toggleP4={e => this.toggleP4(e)}
         />
-        <Sections connect={connect} about={about}/>
+        <Sections connect={connect} about={about} projects={projects}/>
       </div>
     );
   }

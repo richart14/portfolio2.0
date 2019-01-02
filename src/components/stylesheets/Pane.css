@@ -124,9 +124,9 @@
 
 .pane.p3.start {
   cursor: default;
-  -ms-transform: translateY(-13%);
-  -webkit-transform: translateY(-13%);
-  transform: translateY(-13%); 
+  -ms-transform: translateY(100%);
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%); 
 }
 
 .pane.p4 {

@@ -20,6 +20,7 @@
   font-size: 30pt;
   letter-spacing: .5em;
   color: skyblue;
+  /* color: lawngreen; */
   font-weight: 500;
   padding-left: 53px;
   z-index: 5;
@@ -27,6 +28,7 @@
 
 .landing .title .highlight {
   color: #0e76bc;
+  /* color: green; */
   font-weight: 700;
 }
 
@@ -35,6 +37,7 @@
   bottom: 30%;
   z-index: 99;
   color: black;
+  /* color: white; */
   text-transform: uppercase;
   letter-spacing: .3em;
   margin: 0 auto;
