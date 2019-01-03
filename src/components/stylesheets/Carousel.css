@@ -1,7 +1,59 @@
+section.projects .portfolio-item#item-1 {
+  /* background: #3D2A24; */
+  background-image: linear-gradient(#3D2A24, #20c2f1);
+}
+section.projects .portfolio-item#item-2 {
+  /* background: #60a114; */
+  background-image: linear-gradient(#60a114, #20c2f1);
 
-
-.carousel { 
-  background: #419be0;
-  height: 40vh;
+}
+section.projects .portfolio-item#item-3 {
+  /* background: #03a9f4; */
+  background-image: linear-gradient(#e6ecee, #20c2f1);
 }
 
+section.projects .carousel .slick-slide {
+  outline: none;
+  cursor: pointer;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: gray;
+  transition: filter .7s linear;
+  -webkit-transition: -webkit-filter .7s linear;
+  overflow: hidden;
+  position: relative; 
+}
+
+
+section.projects .carousel .slick-slide img {
+  margin: 0 auto;
+  max-height: 350px; 
+}
+
+
+section.projects .carousel .slick-slide.slick-center {
+  cursor: pointer;
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%); 
+}
+
+section.projects .portfolio-item .caption {
+  background: #20c2f1;
+  position: absolute;
+  width: 100%;
+  height: 99%;
+  opacity: 0;
+  transition: all ease .5s;
+  -webkit-transition: all ease .5s;
+  -moz-transition: all ease .5s;
+}
+
+section.projects .slick-active .portfolio-item .caption:hover {
+  opacity: .85;
+}
+
+section.projects .caption i {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

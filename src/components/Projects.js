@@ -4,11 +4,15 @@ import Carousel from './Carousel';
 import aslPic from './images/projects/asl-app.png';
 import shavPic from './images/projects/shaving.png';
 import travelPic from './images/projects/travelapp.png';
+import fullAslPic from './images/projects/fullasl-app.png';
+import fullShavPic from './images/projects/fullshaving.png';
+import fullTravelPic from './images/projects/fulltravelapp.png';
 
 export class Projects extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      useFull: window.innerWidth <= 760, 
       projects : [
         {
           name: 'ShaveReducer',
@@ -16,6 +20,7 @@ export class Projects extends Component {
           frontend: 'React, Redux, Redux-Thunk, React-Router, Moment, React-Tabs, React-Modal, Enzyme/Jest, HTML5, CSS3, CI(Travis), CD(Netlify)',
           backend: 'Node.js, Express, MongoDB, Mongoose, Bcrypt, Passport, JSON Web Tokens, Cloudinary, Mocha/Chai, CI(Travis), CD(Heroku)',
           img: shavPic,
+          fullimg: fullShavPic,
           url: 'https://hetokibo-shaving-client.herokuapp.com/',
           github: ''
         },
@@ -25,6 +30,7 @@ export class Projects extends Component {
           frontend: 'React, Redux, Redux-Thunk, React-Router, HTML5, CSS3, Responsive Design, CD (Netlify)',
           backend: 'Node.js, Express, MongoDB, Mongoose, Bcrypt, JSON Web Tokens, Passport.js, Mocha/Chai, CI (Travis), CD (Heroku)',
           img: aslPic,
+          fullimg : fullAslPic,
           url: '',
           github: '',
         },
@@ -34,18 +40,34 @@ export class Projects extends Component {
           frontend: 'React, Redux, Redux-Thunk, React-Router, React-Forms HTML5, CSS3, Responsive Design, CD (Netlify)',
           backend: 'Node.js, Express, MongoDB, Mongoose, Bcrypt, JSON Web Tokens, Mocha/Chai, CI (Travis), CD (Heroku)',
           img: travelPic,
+          fullimg: fullTravelPic,
           url: '',
           github: '',
         },
       ]
     }
+    this.resize = this.resize.bind(this);
   }
+
+  componentDidMount() {
+    window.addEventListener("resize", this.resize);
+    this.resize();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.resize);
+  }
+
+  resize() {
+    this.setState({useFull: window.innerWidth <= 760});
+  }
+
   render() {
     const { status } = this.props;
-    const { projects } = this.state;
+    const { projects, useFull } = this.state;
     return (
       <section className={`projects ${ status.active ? 'show' : '' }`}>
-        <Carousel projects={ projects }/>
+        <Carousel full={useFull} projects={ projects }/>
       </section>
     )
   }

@@ -28,19 +28,18 @@ export class Carousel extends Component {
       arrows: false,
       focusOnSelect: true,
       speed: 500,
-      // variableWidth: true,
     };
 
-    const { projects } = this.props;
+    const { projects, full } = this.props;
     const projectJSX = projects.map((project, i ) => {
       return (
-        <div className="portfolio-item" key={`item-${i+1}`}>
+        <div className="portfolio-item" id={`item-${i+1}`} key={`item-${i+1}`}>
           <div className="caption">
             <div className="caption-content">
               <i className="fa fa-search-plus fa-3x"></i>
             </div>
           </div>
-          <img className="img-fluid" src={project.img} alt={`Project: ${project.name}`}/>
+          <img className="img-fluid" src={full ? project.img : project.fullimg} alt={`Project: ${project.name}`}/>
         </div>
       );
     });

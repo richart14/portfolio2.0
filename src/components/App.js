@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './stylesheets/App.css';
 import Clouds from './Clouds';
 import Landing from './Landing';
-import Matrix from './Matrix';
+// import Matrix from './Matrix';
 import PaneContainer from './PaneContainer';
 import Sections from './Sections';
 
