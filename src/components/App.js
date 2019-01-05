@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './stylesheets/App.css';
 import Clouds from './Clouds';
 import Landing from './Landing';
-// import Matrix from './Matrix';
 import PaneContainer from './PaneContainer';
 import Sections from './Sections';
 
@@ -364,7 +363,6 @@ class App extends Component {
       <div className="App">
         <Clouds inverse={false}/>
         <Clouds inverse={true} display={cloud.display}/>
-        {/* <Matrix /> */}
         <Landing shutState={landing.shutter} mounted={mounted}/>
         <PaneContainer 
           toggleSquare={e => this.toggleSquare(e)} 

@@ -19,6 +19,8 @@ export class Carousel extends Component {
   }
 
   render() {
+    const { projects, full, toggleModal, slideChange, currentSlide } = this.props;
+
     var settings = {
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -28,13 +30,13 @@ export class Carousel extends Component {
       arrows: false,
       focusOnSelect: true,
       speed: 500,
+      beforeChange: (current, next) => slideChange(next)
     };
 
-    const { projects, full } = this.props;
     const projectJSX = projects.map((project, i ) => {
       return (
         <div className="portfolio-item" id={`item-${i+1}`} key={`item-${i+1}`}>
-          <div className="caption">
+          <div className="caption" onClick={currentSlide === i ? toggleModal : null}>
             <div className="caption-content">
               <i className="fa fa-search-plus fa-3x"></i>
             </div>

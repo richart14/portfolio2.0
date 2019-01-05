@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './stylesheets/Projects.css';
 import Carousel from './Carousel';
+import Modal from './Modal';
 import aslPic from './images/projects/asl-app.png';
 import shavPic from './images/projects/shaving.png';
 import travelPic from './images/projects/travelapp.png';
@@ -22,7 +23,7 @@ export class Projects extends Component {
           img: shavPic,
           fullimg: fullShavPic,
           url: 'https://hetokibo-shaving-client.herokuapp.com/',
-          github: ''
+          github: 'https://github.com/thinkful-ei22/shaving-tracker-client'
         },
         {
           name: 'uh-SIGN-ment',
@@ -31,8 +32,8 @@ export class Projects extends Component {
           backend: 'Node.js, Express, MongoDB, Mongoose, Bcrypt, JSON Web Tokens, Passport.js, Mocha/Chai, CI (Travis), CD (Heroku)',
           img: aslPic,
           fullimg : fullAslPic,
-          url: '',
-          github: '',
+          url: 'https://sign-app-client.herokuapp.com/',
+          github: 'https://github.com/thinkful-ei22/asl-client-richard-akim',
         },
         {
           name: 'Itinerary Planner',
@@ -41,12 +42,16 @@ export class Projects extends Component {
           backend: 'Node.js, Express, MongoDB, Mongoose, Bcrypt, JSON Web Tokens, Mocha/Chai, CI (Travis), CD (Heroku)',
           img: travelPic,
           fullimg: fullTravelPic,
-          url: '',
-          github: '',
+          url: 'https://itinerary-planner.netlify.com/',
+          github: 'https://github.com/richart14/travel-app-client',
         },
-      ]
+      ],
+      showModal: false,
+      currentSlide: 0,
     }
     this.resize = this.resize.bind(this);
+    this.toggleModal = this.toggleModal.bind(this);
+    this.slideChange = this.slideChange.bind(this);
   }
 
   componentDidMount() {
@@ -62,12 +67,33 @@ export class Projects extends Component {
     this.setState({useFull: window.innerWidth <= 760});
   }
 
+  toggleModal() {
+    const { showModal } = this.state;
+    this.setState({ showModal: !showModal })
+  }
+
+  slideChange(next) {
+    this.setState({currentSlide: next})
+  }
+
   render() {
     const { status } = this.props;
-    const { projects, useFull } = this.state;
+    const { projects, showModal, useFull, currentSlide } = this.state;
     return (
       <section className={`projects ${ status.active ? 'show' : '' }`}>
-        <Carousel full={useFull} projects={ projects }/>
+        <Modal 
+          showModal={showModal} 
+          useFull={useFull} 
+          toggleModal={e => this.toggleModal()}
+          currentSlide={projects[currentSlide]}
+        />
+        <Carousel 
+          full={useFull} 
+          projects={ projects } 
+          toggleModal={e => this.toggleModal()}
+          slideChange={e => this.slideChange(e)}
+          currentSlide={currentSlide}
+        />
       </section>
     )
   }
