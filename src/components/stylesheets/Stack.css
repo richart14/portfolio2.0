@@ -14,6 +14,8 @@ section.stack .container {
   width: 80%; 
   z-index: 16;
   animation: slideInRight .75s ease;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 section.stack .container.hide {
@@ -21,7 +23,6 @@ section.stack .container.hide {
 }
 
 section.stack .container .bar {
-  width: 100%;
   height: 3.5em;
   background-color: #00A1A7;
   margin: 10px;
@@ -32,8 +33,10 @@ section.stack .container .bar .inner {
   width: 65%;
   margin: 0 auto;
   height: 100%;
+  font-size: 3em;
   line-height: 3em;
   color: #ffffff;
+  vertical-align: center;
 }
 
 @media only screen and (max-width: 30em) {

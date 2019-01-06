@@ -331,7 +331,6 @@ class App extends Component {
   }
 
   toggleP4(e) {
-    console.log('togglep4');
     const { stack , p1, p2, p3, p4 } = this.state;
     this.setState({
       stack : {
