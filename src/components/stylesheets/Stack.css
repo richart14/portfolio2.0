@@ -25,7 +25,6 @@ section.stack .container.hide {
 section.stack .container .bar {
   height: 3.5em;
   background-color: #00A1A7;
-  margin: 10px;
 }
 
 section.stack .container .bar .inner {
