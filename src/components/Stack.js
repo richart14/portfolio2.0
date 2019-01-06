@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Badge from './Badge';
+import Bar from './Bar';
 import './stylesheets/Stack.css';
 
 export class Stack extends Component {
@@ -20,7 +20,7 @@ export class Stack extends Component {
     return (
       <section className="stack">
         
-        <Badge stack={stack} status={status}/>
+        <Bar stack={stack} status={status}/>
 
       </section>
     )
