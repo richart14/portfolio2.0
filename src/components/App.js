@@ -357,7 +357,7 @@ class App extends Component {
   }
 
   render() {
-    const { mounted, landing, cloud, p1, p2, p3, p4, square, connect, about, projects } = this.state;
+    const { mounted, landing, cloud, p1, p2, p3, p4, square, connect, about, projects, stack } = this.state;
 
     return (
       <div className="App">
@@ -373,7 +373,7 @@ class App extends Component {
           toggleP3={e => this.toggleP3(e)}
           toggleP4={e => this.toggleP4(e)}
         />
-        <Sections connect={connect} about={about} projects={projects}/>
+        <Sections connect={connect} about={about} projects={projects} stack={stack}/>
       </div>
     );
   }

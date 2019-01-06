@@ -6,14 +6,14 @@ import Projects from './Projects';
 
 export class Sections extends Component {
   render() {
-    const { connect, about, projects } = this.props;
+    const { connect, about, projects, stack } = this.props;
     
     return (
       <div className="sections">
         <AboutMe status={ about } />
         <Connect status={ connect }/>
         <Projects status={ projects }/>
-        <Stack />
+        <Stack status={stack}/>
       </div>
     )
   }

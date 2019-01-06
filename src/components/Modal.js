@@ -41,8 +41,8 @@ export class Modal extends Component {
             <ul style={{listStyle: "none"}} className="list-inline item-details">
               <li>Frontend: <strong>{frontend}</strong></li>
               <li>Backend: <strong>{backend}</strong></li>
-              <li>Link: <strong><a href={url} target="_blank">{name}</a></strong></li>
-              <li>Github: <strong><a href={github} target="_blank">{name}</a></strong></li>
+              <li>Link: <strong><a href={url} target="_blank" rel="noopener noreferrer">{name}</a></strong></li>
+              <li>Github: <strong><a href={github} target="_blank" rel="noopener noreferrer">{name}</a></strong></li>
             </ul>
             <button style={{height:'50px', position: "absolute", top: '0', right: '0', background: 'transparent', color: 'black'}} onClick={toggleModal}>X</button>          
           </div>

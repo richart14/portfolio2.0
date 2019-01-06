@@ -1,0 +1,21 @@
+section.stack {
+  width: 42%;
+  right: 0;
+  height: 100%;
+  position: absolute; }
+section.stack .container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 615px;
+  margin: auto auto;
+  left: 0;
+  right: 0;
+  width: 345px; 
+  z-index: 16;
+  background: red;
+}
+
+section.stack .container.hide {
+  display: none;
+}

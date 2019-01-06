@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Badge from './Badge';
+import './stylesheets/Stack.css';
 
 export class Stack extends Component {
   constructor(props){
@@ -8,16 +10,18 @@ export class Stack extends Component {
         { name : 'css3', icon : 'fab fa-css3' },
         { name : 'react', icon : 'fab fa-react' },
         { name : 'javascript', icon : 'fab fa-js' },
-        
+
       ]
     }
   }
   render() {
-
+    const { stack } = this.state;
+    const { status } = this.props;
     return (
       <section className="stack">
-        <div className="badges-box">
-        </div>
+        
+        <Badge stack={stack} status={status}/>
+
       </section>
     )
   }
