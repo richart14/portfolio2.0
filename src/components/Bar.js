@@ -9,6 +9,7 @@ export class Bar extends Component {
         <div className="bar"><div className="inner">CSS3</div></div>
         <div className="bar"><div className="inner">HTML5</div></div>
         <div className="bar"><div className="inner">JAVASCRIPT</div></div>
+        <div className="bar"><div className="inner">JAVA</div></div>
         <div className="bar"><div className="inner">REACT</div></div>
         <div className="bar"><div className="inner">REDUX</div></div>
         <div className="bar"><div className="inner">NODE.JS</div></div>
