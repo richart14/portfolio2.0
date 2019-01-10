@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import mylogo from './images/power.png';
+import power from './images/power.png';
 import './stylesheets/Square.css';
 
 export class Square extends Component {
@@ -8,7 +8,7 @@ export class Square extends Component {
 
     return (
       <div className="square" id="square">
-        <img className={`logo ${ shake ? 'shake' : '' }`}src={mylogo} alt="logo" onClick={toggleLand} />
+        <img className={`power ${ shake ? 'shake' : '' }`}src={power} alt="logo" onClick={toggleLand} />
       </div>
     )
   }

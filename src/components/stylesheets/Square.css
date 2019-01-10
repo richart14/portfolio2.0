@@ -12,7 +12,7 @@
   width: 16%;
 }
 
-.square .logo {
+.square .power {
   cursor: pointer;
   height: 8vw;
   max-height: 110px;
@@ -29,19 +29,19 @@
   -webkit-transition: -webkit-filter .4s linear;
 }
 
-.square .logo:hover {
+.square .power:hover {
   -webkit-filter: saturate(200%);
   filter: saturate(200%);
 }
 
-.square .logo.shake {
+.square .power.shake {
   animation: shake 8s infinite;
   -webkit-animation: shake 8s infinite;
 }
 
 
 @media only screen and (max-width: 50em) {
-  .square .logo {
+  .square .power {
     min-height: 41px;
     min-width: 41px;
   }
