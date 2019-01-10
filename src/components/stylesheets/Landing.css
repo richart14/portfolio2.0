@@ -19,16 +19,14 @@
   text-transform: uppercase;
   font-size: 30pt;
   letter-spacing: .5em;
-  color: skyblue;
-  /* color: lawngreen; */
+  color: #00FF00;
   font-weight: 500;
   padding-left: 53px;
   z-index: 5;
 }
 
 .landing .title .highlight {
-  color: #0e76bc;
-  /* color: green; */
+  color: #32CD32;
   font-weight: 700;
 }
 
@@ -37,7 +35,6 @@
   bottom: 30%;
   z-index: 99;
   color: black;
-  /* color: white; */
   text-transform: uppercase;
   letter-spacing: .3em;
   margin: 0 auto;
@@ -84,5 +81,11 @@
     font-size: 10pt;
     display: block;
     margin-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 30em) {
+  .landing .tag-box {
+    bottom: 20%;
   }
 }

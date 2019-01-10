@@ -21,6 +21,8 @@ export class Modal extends Component {
         position              : 'absolute',
         overflow              : 'scroll',
         textAlign             : 'center',
+        paddingTop            : '100px',
+        paddingBottom         : '100px',
       }
     };
 
@@ -44,7 +46,7 @@ export class Modal extends Component {
               <li>Link: <strong><a href={url} target="_blank" rel="noopener noreferrer">{name}</a></strong></li>
               <li>Github: <strong><a href={github} target="_blank" rel="noopener noreferrer">{name}</a></strong></li>
             </ul>
-            <button style={{height:'50px', position: "absolute", top: '0', right: '0', background: 'transparent', color: 'black'}} onClick={toggleModal}>X</button>          
+            <button style={{height:'50px', position: "absolute", top: '60px', right: '0', background: 'transparent', color: 'black'}} onClick={toggleModal}>X</button>          
           </div>
         </ReactModal>
       </div>

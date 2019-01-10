@@ -27,8 +27,8 @@
   background: url("../images/clouds1.png");
   background-repeat: repeat-x;
   background-position: bottom left;
-  animation: slide 100s linear infinite;
-  -webkit-animation: slide 100s linear infinite;
+  animation: slide 150s linear infinite;
+  -webkit-animation: slide 150s linear infinite;
   z-index: 3;
 }
 
@@ -36,8 +36,8 @@
   background: url("../images/clouds2.png");
   background-repeat: repeat-x;
   background-position: bottom left;
-  animation: slide 300s linear infinite;
-  -webkit-animation: slide 300s linear infinite;
+  animation: slide 400s linear infinite;
+  -webkit-animation: slide 400s linear infinite;
   z-index: 2;
 }
 
@@ -45,9 +45,9 @@
   background: url("../images/clouds3.png");
   background-repeat: repeat-x;
   background-position: bottom left;
-  animation: slide 1000s linear infinite;
-  -webkit-animation: slide 1000s linear infinite;
-  background-color: lightblue;
+  animation: slide 600s linear infinite;
+  -webkit-animation: slide 600s linear infinite;
+  background-color: #90EE90;
   margin-top: -1px;
   z-index: 1;
 }

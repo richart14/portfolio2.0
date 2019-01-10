@@ -40,7 +40,7 @@ section.about .about-box .header {
   display: block;
   text-align: center;
   font-size: 23pt;
-  color: #49b9c0;
+  color: #4dc049;
   font-weight: 600; 
   /* Fixes to profile pic */
   margin-top: 125px;
@@ -52,7 +52,7 @@ section.about .about-box .detail {
   color: #555;
   margin-left: 20px;
   line-height: 24pt; 
-  font-weight: 300;
+  font-weight: 500;
 }
 
 @media only screen and (max-width: 80em), screen and (max-height: 55em) {

@@ -7,7 +7,7 @@ section.stack .container {
   position: absolute;
   top: 0;
   bottom: 0;
-  min-height: 80%;
+  height: 80%;
   margin: auto auto;
   left: 0;
   right: 0;
@@ -23,23 +23,26 @@ section.stack .container.hide {
 }
 
 section.stack .container .bar {
-  /* height: 3.5em; */
-  background-color: #00A1A7;
+  background-color: rgb(0, 167, 14);
 }
 
 section.stack .container .bar .inner {
-  background-color: #04C2C9;
+  background-color: rgb(4, 201, 14);
   width: 65%;
   margin: 0 auto;
   height: 100%;
-  /* line-height: 3em; */
   color: #ffffff;
+}
+
+section.stack .container .bar .inner span{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 @media only screen and (max-width: 30em) {
   section.stack .container .bar .inner {
     font-size: .5em;
-    /* line-height: 5em; */
   }
 }
 

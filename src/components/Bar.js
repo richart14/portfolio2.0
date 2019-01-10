@@ -6,16 +6,16 @@ export class Bar extends Component {
     return (
       <div className={`container ${status.active ? '' : 'hide'}`}>
       
-        <div className="bar"><div className="inner">CSS3</div></div>
-        <div className="bar"><div className="inner">HTML5</div></div>
-        <div className="bar"><div className="inner">JAVASCRIPT</div></div>
-        <div className="bar"><div className="inner">JAVA</div></div>
-        <div className="bar"><div className="inner">REACT</div></div>
-        <div className="bar"><div className="inner">REDUX</div></div>
-        <div className="bar"><div className="inner">NODE.JS</div></div>
-        <div className="bar"><div className="inner">EXPRESS</div></div>
-        <div className="bar"><div className="inner">MONGODB</div></div>
-        <div className="bar"><div className="inner">SQL</div></div>
+        <div className="bar"><div className="inner"><span>CSS3</span></div></div>
+        <div className="bar"><div className="inner"><span>HTML5</span></div></div>
+        <div className="bar"><div className="inner"><span>JAVASCRIPT</span></div></div>
+        <div className="bar"><div className="inner"><span>JAVA</span></div></div>
+        <div className="bar"><div className="inner"><span>REACT</span></div></div>
+        <div className="bar"><div className="inner"><span>REDUX</span></div></div>
+        <div className="bar"><div className="inner"><span>NODE.JS</span></div></div>
+        <div className="bar"><div className="inner"><span>EXPRESS</span></div></div>
+        <div className="bar"><div className="inner"><span>MONGODB</span></div></div>
+        <div className="bar"><div className="inner"><span>SQL</span></div></div>
       </div>
     )
   }

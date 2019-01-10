@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import mylogo from './images/mylogo.png';
+import mylogo from './images/power.png';
 import './stylesheets/Square.css';
 
 export class Square extends Component {
