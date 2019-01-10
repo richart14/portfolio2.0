@@ -7,7 +7,7 @@ section.stack .container {
   position: absolute;
   top: 0;
   bottom: 0;
-  height: 80%;
+  min-height: 80%;
   margin: auto auto;
   left: 0;
   right: 0;
@@ -23,7 +23,7 @@ section.stack .container.hide {
 }
 
 section.stack .container .bar {
-  height: 3.5em;
+  /* height: 3.5em; */
   background-color: #00A1A7;
 }
 
@@ -32,14 +32,14 @@ section.stack .container .bar .inner {
   width: 65%;
   margin: 0 auto;
   height: 100%;
-  line-height: 3em;
+  /* line-height: 3em; */
   color: #ffffff;
 }
 
 @media only screen and (max-width: 30em) {
   section.stack .container .bar .inner {
     font-size: .5em;
-    line-height: 5em;
+    /* line-height: 5em; */
   }
 }
 

@@ -27,7 +27,8 @@ section.projects .carousel .slick-slide {
 
 section.projects .carousel .slick-slide img {
   margin: 0 auto;
-  max-height: 350px; 
+  /* max-height: 350px;  */
+  max-height: 40vh;
 }
 
 
