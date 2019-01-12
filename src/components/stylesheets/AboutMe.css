@@ -47,6 +47,7 @@ section.about .about-box .header {
 }
 
 section.about .about-box .detail {
+  overflow: scroll;
   display: block;
   font-size: 16pt;
   color: #555;
