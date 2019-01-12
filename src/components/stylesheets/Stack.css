@@ -27,7 +27,7 @@ section.stack .container .bar {
 }
 
 section.stack .container .bar .inner {
-  background-color: rgb(4, 201, 14);
+  background-color: #51dd3e;
   width: 65%;
   margin: 0 auto;
   height: 100%;
