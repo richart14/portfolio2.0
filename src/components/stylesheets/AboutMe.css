@@ -80,7 +80,8 @@ section.about .about-box .detail {
 @media only screen and (max-width: 30em) {
   section.about .about-box .detail {
     font-size: 8pt;
-    line-height: 10pt; 
+    line-height: 10pt;
+    font-weight: 300; 
   }
 }
 
